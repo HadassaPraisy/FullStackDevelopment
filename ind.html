@@ -1,0 +1,14 @@
+<script src="ind.js"></script>
+<script>
+    function factorial() {
+        var n= document.getElementById("n").value;
+        var op =  fact_1.Calc.factorial(n);
+
+        var span1 = document.getElementById("span1");
+        span1.innerHTML = op;
+
+    }
+</script>
+enter number : <input type="number" id="n"><br>
+<button onclick="factorial()"> factorial </button>
+<span id="span1"></span>

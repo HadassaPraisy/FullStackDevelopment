@@ -1,0 +1,61 @@
+<head>
+    <script src="ui.js"> </script>
+    <script>
+        function display1{
+        var gender = document.getElementsByName("gender");
+        var name = document.getElementById("name").value;
+        var terms=document.getElementById("terms");  
+        
+        var selectedGender = '';
+
+        if(gender[0].checked) {
+            selectedGender ='mid';
+        else if(gender[1].checked) {
+            selectedGender='fid';
+        }
+
+        var msg = display(name, selectedGender, terms)
+
+        }
+    }
+        
+    </script>
+</head>
+<h1>
+    UI Programming
+</h1>
+
+
+<table border="1">
+    <tr>
+        <td> <label for="name" > Enter name:</label> </td>
+        <td><input type="text" id="name"></td>
+    </tr>
+
+    <tr>
+        <td> <label for=""> Gender: </label></td>
+        <td>
+            <input type="radio" name="gender" value="m" id="mid"> <label for="m">Male </label>
+            <input type="radio" name="gender" value="f" id="fid"> <label for="f">Female </label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" id="terms"> <label for="terms"> Terms & Conditions</label>
+        </td>
+    </tr>
+<tr>
+    <td>
+        <button onclick="display()">Display</button>
+    </td>
+    <td>
+        <input type="reset">
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+        <span id="span1"> Message </span>
+    </td>
+</tr>
+</table>

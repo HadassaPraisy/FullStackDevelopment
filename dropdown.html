@@ -1,0 +1,17 @@
+<script>
+    function f1() {
+        var x= document.getElementById("s1");
+        var y = `Hi ${x.options[x.selectedIndex].value}`;
+
+        document.getElementById("lb1").innerHTML = y;
+    }
+</script>
+
+<select id="s1" onclick='f1()'>
+    <option value="north"> North </option>
+    <option value="south"> South </option>
+    <option value="east"> East </option>
+    <option value="west"> West </option>
+</select>
+
+<label for="lb1"></label>

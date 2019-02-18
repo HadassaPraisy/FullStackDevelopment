@@ -1,0 +1,14 @@
+<script>
+    function display(c) {
+        var span1=document.getElementById("span1");
+        span1.innerHTML=c;
+        span1.style.color=c;
+    }
+</script>
+
+
+<input type="radio" value="RED" onchange="display(this.value)" id="red"> <label for="red"> RED </label>  <br>
+<input type="radio" value="BLUE" onchange="display(this.value)" id="blue"><label for="blue">BLUE </label>   <br>
+<input type="radio" value="GREEN" onchange="display(this.value)" id="green"> <label for="green"> GREEN </label> <br>
+
+<span id="span1"></span>

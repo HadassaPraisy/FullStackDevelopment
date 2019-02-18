@@ -1,0 +1,36 @@
+<head>
+    <script>
+        function submit() {
+            var name = document.getElementById("name1").value;
+            var gender = document.getElementsByName("gender");
+            var span1 = document.getElementById("spantext");
+            var msg='';
+
+            if(gender[0].checked) {
+                msg=`Hello Mr. ${name}`;
+            }
+
+            else if(gender[1].checked) {
+                msg = ` Hello Mrs.${name}`;
+
+            }
+
+            span1.innerHTML = msg;
+        }
+    </script>
+</head>
+
+<h2>
+    Handling Radio Buttons
+</h2>
+
+<label for="name1">Enter Name: </label>
+<input type="text" id="name1">
+<br>
+
+Choose Gender: <br>
+<input type="radio" id="m" name="gender"> <label for="m"> Male </label>
+<input type="radio" id="f" name="gender"> <label for="f">Female</label>
+
+<button onclick="submit()"> Submit </button><br>
+<span id="spantext"></span>

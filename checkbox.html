@@ -1,0 +1,27 @@
+<head>
+    <script>
+        function display() {
+        var name = document.getElementById("name").value;
+        var terms= document.getElementById("terms");
+        var span1=document.getElementById("span1");
+        var msg='';
+
+        if(terms.checked) {
+            msg=`thank you ${name} for accepting`;
+        }
+        else {
+            msg=`${name}, please accept terms and conditions`;
+        }
+        span1.innerHTML=msg;
+    }
+    </script>
+</head>
+<h2>
+    Handling check box
+</h2>
+
+ Enter Name : <input type="text" id="name"><br>
+<input type="checkbox" id="terms"> Terms and Conditions <br>
+<button onclick="display()"> Submit </button>
+
+<span id="span1"></span>

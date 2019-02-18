@@ -1,0 +1,50 @@
+<head>
+    <script>
+        function calc() {
+            var m=Number(document.getElementById("mat").value);
+            var p=Number(document.getElementById("phy").value);
+            var c=Number(document.getElementById("chem").value);
+
+            var tot=m+p+c;
+
+            document.getElementById("span1").innerHTML = tot;
+            var span2=document.getElementById("span2");
+
+            var result = "FAIL";
+            if( m<=35 && p<=35 && c<=35 )  {
+                result = "PASS";
+                span2.style.color="GREEN";
+            }
+            else {
+                result = "FAIL";
+                span2.style.color="RED";
+            }
+            span2.innerHTML=result;
+        }    
+    </script>
+</head>
+
+
+<table border="1">
+    <tr>
+        <td>Maths</td>
+        <td><input type="text" id="mat" /></td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td><input type="text" id="phy" /></td>
+    </tr>
+    <tr>
+        <td>Chemistry</td>
+        <td><input type="text" id="chem" /></td>/
+    </tr>
+        <button onclick="calc()"> Submit </button>
+    <tr>
+            <th>Total</th>
+            <td><span id="span1"> </span></td>
+        </tr>
+    <tr>
+        <th>Result</th>
+        <td><span id="span2"> </span></td>
+    </tr>
+</table>
